@@ -1,0 +1,30 @@
+#include <string.h>
+#include <omnetpp.h>
+
+using namespace omnetpp;
+
+class Txc2 : public cSimpleModule
+{
+  protected:
+    virtual void initialize() override;
+    virtual void handleMessage(cMessage *msg) override;
+};
+
+// The module class needs to be registered with OMNeT++
+Define_Module(Txc2);
+
+void Txc2::initialize()
+{
+    // Am I Tic or Toc?
+    if (strcmp("tic", getName()) == 0) {
+        cMessage *msg = new cMessage("tictocMsg");
+        EV << "Sending initial message\n";
+        send(msg, "out");
+    }
+}
+
+void Txc2::handleMessage(cMessage *msg)
+{
+    EV << "Received message: " << msg->getName() << ", send back.";
+    send(msg, "out"); // send out the message
+}

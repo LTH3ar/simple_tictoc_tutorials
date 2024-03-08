@@ -1,0 +1,33 @@
+simple Txc8
+{
+    parameters:
+        @display("i=block/routing");
+        int limit = default(10);
+        
+    gates:
+        input in;
+        output out;
+}
+
+
+simple Tic8 extends Txc8
+{
+    parameters:
+        @display("i=,blue");
+}
+
+simple Toc8 extends Txc8
+{
+    parameters:
+        @display("i=,red");
+}
+
+network Tictoc8
+{
+    submodules:
+        tic: Tic8;
+        toc: Toc8;
+    connections:
+        tic.out --> {  delay = 100ms; } --> toc.in;
+        tic.in <-- {  delay = 100ms; } <-- toc.out;
+}

@@ -1,0 +1,101 @@
+15:10:14 **** Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+txc1.cc
+Creating executable: out/gcc-debug//TicToc_0_dbg
+15:15:22 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+make: Nothing to be done for 'all'.
+15:21:23 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+txc2.cc
+Creating executable: out/gcc-debug//TicToc_0_dbg
+15:34:34 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+txc2.cc
+txc3.cc
+Creating executable: out/gcc-debug//TicToc_0_dbg
+15:36:22 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+txc3.cc
+Creating executable: out/gcc-debug//TicToc_0_dbg
+15:39:15 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+txc3.cc
+Creating executable: out/gcc-debug//TicToc_0_dbg
+15:52:11 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+txc3.cc
+txc4.cc
+Creating executable: out/gcc-debug//TicToc_0_dbg
+15:53:22 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+make: Nothing to be done for 'all'.
+16:02:28 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+txc5.cc
+Creating executable: out/gcc-debug//TicToc_0_dbg
+16:27:33 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+txc6.cc
+Creating executable: out/gcc-debug//TicToc_0_dbg
+16:47:21 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+make: Nothing to be done for 'all'.
+16:48:20 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+make: Nothing to be done for 'all'.
+19:36:48 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+txc7.cc
+Creating executable: out/gcc-debug//TicToc_0_dbg
+19:41:44 **** Incremental Build of configuration debug for project TicToc_0 ****
+make MODE=debug all 
+txc7.cc
+txc8.cc
+Creating executable: out/gcc-debug//TicToc_0_dbg
+/usr/bin/ld: out/gcc-debug//txc8.o: in function `Txc7::~Txc7()':
+/home/raven/git_clone/omnet_samples/tictoc/TicToc_0/txc8.cc:24: multiple definition of `Txc7::~Txc7()'; out/gcc-debug//txc7.o:/home/raven/git_clone/omnet_samples/tictoc/TicToc_0/txc7.cc:24: first defined here
+/usr/bin/ld: out/gcc-debug//txc8.o: in function `Txc7::~Txc7()':
+/home/raven/git_clone/omnet_samples/tictoc/TicToc_0/txc8.cc:24: multiple definition of `Txc7::~Txc7()'; out/gcc-debug//txc7.o:/home/raven/git_clone/omnet_samples/tictoc/TicToc_0/txc7.cc:24: first defined here
+/usr/bin/ld: out/gcc-debug//txc8.o: in function `Txc7::~Txc7()':
+/home/raven/git_clone/omnet_samples/tictoc/TicToc_0/txc8.cc:24: multiple definition of `Txc7::~Txc7()'; out/gcc-debug//txc7.o:/home/raven/git_clone/omnet_samples/tictoc/TicToc_0/txc7.cc:24: first defined here
+/usr/bin/ld: out/gcc-debug//txc8.o: in function `Txc7::initialize()':
+/home/raven/git_clone/omnet_samples/tictoc/TicToc_0/txc8.cc:32: multiple definition of `Txc7::initialize()'; out/gcc-debug//txc7.o:/home/raven/git_clone/omnet_samples/tictoc/TicToc_0/txc7.cc:32: first defined here
+/usr/bin/ld: out/gcc-debug//txc8.o: in function `Txc7::handleMessage(omnetpp::cMessage*)':
+/home/raven/git_clone/omnet_samples/tictoc/TicToc_0/txc8.cc:51: multiple definition of `Txc7::handleMessage(omnetpp::cMessage*)'; out/gcc-debug//txc7.o:/home/raven/git_clone/omnet_samples/tictoc/TicToc_0/txc7.cc:51: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:105: out/gcc-debug//TicToc_0_dbg] Error 1
+"make MODE=debug all" terminated with exit code 2. Build might be incomplete.
+19:43:31 **** Incremental Build of configuration release for project TicToc_0 ****
+make MODE=release all 
+txc1.cc
+txc2.cc
+txc3.cc
+txc4.cc
+txc5.cc
+txc6.cc
+txc7.cc
+txc8.cc
+Creating executable: out/gcc-release//TicToc_0
+22:51:30 **** Incremental Build of configuration release for project TicToc_0 ****
+make MODE=release all 
+txc8.cc
+In file included from /home/raven/Applications/omnetpp-6.0.3/include/omnetpp/cobject.h:26,
+                 from /home/raven/Applications/omnetpp-6.0.3/include/omnetpp.h:29,
+                 from txc8.cc:2:
+txc8.cc: In function ‘omnetpp::cObject* __factoryfunc_41()’:
+txc8.cc:41:15: error: ‘omnetpp::cModule’ is an inaccessible base of ‘Tic8’
+   41 | Define_Module(Tic8);
+      |               ^~~~
+make: *** [Makefile:116: out/gcc-release//txc8.o] Error 1
+"make MODE=release all" terminated with exit code 2. Build might be incomplete.
+22:52:07 **** Incremental Build of configuration release for project TicToc_0 ****
+make MODE=release all 
+txc8.cc
+Creating executable: out/gcc-release//TicToc_0
+22:55:20 **** Incremental Build of configuration release for project TicToc_0 ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+22:56:45 **** Incremental Build of configuration release for project TicToc_0 ****
+make MODE=release all 
+make: Nothing to be done for 'all'.

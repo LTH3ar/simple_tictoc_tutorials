@@ -1,0 +1,72 @@
+#include <string.h>
+#include <omnetpp.h>
+
+using namespace omnetpp;
+
+class Txc7 : public cSimpleModule
+{
+    private:
+        int counter;
+        cMessage *event = nullptr;
+        cMessage *tictocMsg = nullptr;
+
+    public:
+        virtual ~Txc7();
+
+    protected:
+        virtual void initialize() override;
+        virtual void handleMessage(cMessage *msg) override;
+};
+
+// The module class needs to be registered with OMNeT++
+Define_Module(Txc7);
+
+Txc7::~Txc7()
+{
+    //dispose dynamically allocated the obj
+    cancelAndDelete(event);
+    delete tictocMsg;
+}
+
+void Txc7::initialize()
+{
+    //create event obj use for timing
+    event = new cMessage("event");
+
+    //blank msg
+    tictocMsg = nullptr;
+
+    counter = par("limit");
+    // Am I Tic or Toc?
+    if (par("sendMsgOnInit").boolValue() == true) {
+        EV << "Schedule initial message send t=5.0s\n";
+
+        tictocMsg = new cMessage("tictocMsg");
+
+        scheduleAt(5.0, event);
+    }
+}
+
+void Txc7::handleMessage(cMessage *msg)
+{
+    counter--;
+    WATCH(counter);
+    if (counter <= 0){
+        EV << "Counter reach: 0";
+        delete msg;
+        finish();
+    }
+    else {
+        if (msg == event) {
+            EV << "Wait period is over, sending back message\n";
+            send(tictocMsg, "out");
+            tictocMsg = nullptr;
+        }
+        else{
+            simtime_t delay = par("delayTime");
+            EV << "Message arrived, starting to wait " << ""
+            tictocMsg = msg;
+            scheduleAt(simTime()+1.0, event);
+        }
+    }
+}
