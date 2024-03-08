@@ -1,0 +1,104 @@
+SB ov 1536 ev 2 rid Tictoc3-0-20240307-15:39:20-147676
+
+E # 0 t 0 m 1 ce -1 msg -1
+MC id 1 c omnetpp::cModule t Tictoc3 n Tictoc3 cm 1
+MDC id 1 d ""
+MC id 2 c Txc3 t Txc3 pid 1 n tic
+GC m 2 g 0 n in o 0
+GC m 2 g 3 n out o 1
+MDC id 2 d i=block/routing,blue
+MC id 3 c Txc3 t Txc3 pid 1 n toc
+GC m 3 g 0 n in o 0
+GC m 3 g 3 n out o 1
+MDC id 3 d i=block/routing,red
+CC sm 2 sg 3 dm 3 dg 0
+CDC sm 2 sg 3 d ""
+CC sm 3 sg 3 dm 2 dg 0
+CDC sm 3 sg 3 d ""
+CMB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg pe -1
+- INFO: Sending initial message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe 0
+SH sm 2 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 2 sg 3 st 0 am 3 ag 0 at 0.1 pe 0
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe -1 cid 0
+CME
+CMB sm 1 tm 3 m initialize(0)
+CME
+
+E # 1 t 0.1 m 3 ce 0 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe 1
+SH sm 3 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 3 sg 3 st 0.1 am 2 ag 0 at 0.2 pe 1
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe -1 cid 0
+- INFO: Received message: tictocMsg, send back.
+
+E # 2 t 0.2 m 2 ce 1 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe 2
+SH sm 2 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 2 sg 3 st 0.2 am 3 ag 0 at 0.3 pe 2
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe -1 cid 0
+- INFO: Received message: tictocMsg, send back.
+
+E # 3 t 0.3 m 3 ce 2 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe 3
+SH sm 3 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 3 sg 3 st 0.3 am 2 ag 0 at 0.4 pe 3
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe -1 cid 0
+- INFO: Received message: tictocMsg, send back.
+
+E # 4 t 0.4 m 2 ce 3 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe 4
+SH sm 2 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 2 sg 3 st 0.4 am 3 ag 0 at 0.5 pe 4
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe -1 cid 0
+- INFO: Received message: tictocMsg, send back.
+
+E # 5 t 0.5 m 3 ce 4 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe 5
+SH sm 3 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 3 sg 3 st 0.5 am 2 ag 0 at 0.6 pe 5
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe -1 cid 0
+- INFO: Received message: tictocMsg, send back.
+
+E # 6 t 0.6 m 2 ce 5 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe 6
+SH sm 2 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 2 sg 3 st 0.6 am 3 ag 0 at 0.7 pe 6
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe -1 cid 0
+- INFO: Received message: tictocMsg, send back.
+
+E # 7 t 0.7 m 3 ce 6 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe 7
+SH sm 3 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 3 sg 3 st 0.7 am 2 ag 0 at 0.8 pe 7
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe -1 cid 0
+- INFO: Received message: tictocMsg, send back.
+
+E # 8 t 0.8 m 2 ce 7 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe 8
+SH sm 2 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 2 sg 3 st 0.8 am 3 ag 0 at 0.9 pe 8
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe -1 cid 0
+- INFO: Received message: tictocMsg, send back.
+
+E # 9 t 0.9 m 3 ce 8 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe 9
+SH sm 3 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 3 sg 3 st 0.9 am 2 ag 0 at 1 pe 9
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe -1 cid 0
+- INFO: Received message: tictocMsg, send back.
+
+E # 10 t 1 m 2 ce 9 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe 10
+SH sm 2 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 2 sg 3 st 1 am 3 ag 0 at 1.1 pe 10
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 2 pe -1 cid 0
+- INFO: Received message: tictocMsg, send back.
+
+E # 11 t 1.1 m 3 ce 10 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe 11
+SH sm 3 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg sm 3 sg 3 st 1.1 am 2 ag 0 at 1.2 pe 11
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tictocMsg m 3 pe -1 cid 0
+- INFO: Rece
