@@ -99,3 +99,257 @@ make: Nothing to be done for 'all'.
 22:56:45 **** Incremental Build of configuration release for project TicToc_0 ****
 make MODE=release all 
 make: Nothing to be done for 'all'.
+14:26:07 **** Build of configuration release for project TicToc_0 ****
+make MODE=release all 
+txc9.cc
+Creating executable: out/gcc-release//TicToc_0
+15:38:00 **** Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+17:26:49 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10.cc
+txc10.cc:48:1: error: ‘vvoid’ does not name a type; did you mean ‘void’?
+   48 | vvoid Txc10::forwardMessage(cMessage *msg)
+      | ^~~~~
+      | void
+make: *** [Makefile:108: out/gcc-debug//txc10.o] Error 1
+"make MODE=debug all" terminated with exit code 2. Build might be incomplete.
+17:27:46 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10.cc
+txc10a.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+17:29:23 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+17:48:26 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10.cc
+txc10a.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+17:56:16 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+txc10a.cc: In member function ‘virtual void Txc10a::forwardMessage(omnetpp::cMessage*)’:
+txc10a.cc:61:5: error: ‘k_from’ was not declared in this scope
+   61 |     k_from = getArrivalGate();
+      |     ^~~~~~
+txc10a.cc:61:14: error: ‘getArrivalGate’ was not declared in this scope
+   61 |     k_from = getArrivalGate();
+      |              ^~~~~~~~~~~~~~
+make: *** [Makefile:108: out/gcc-debug//txc10a.o] Error 1
+"make MODE=debug all" terminated with exit code 2. Build might be incomplete.
+17:59:49 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+txc10a.cc: In member function ‘virtual void Txc10a::handleMessage(omnetpp::cMessage*)’:
+txc10a.cc:52:23: error: no matching function for call to ‘Txc10a::forwardMessage(omnetpp::cMessage*&, omnetpp::cGate*)’
+   52 |         forwardMessage(msg, gate("out", k));
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+txc10a.cc:16:18: note: candidate: ‘virtual void Txc10a::forwardMessage(omnetpp::cMessage*)’
+   16 |     virtual void forwardMessage(cMessage *msg);
+      |                  ^~~~~~~~~~~~~~
+txc10a.cc:16:18: note:   candidate expects 1 argument, 2 provided
+txc10a.cc: At global scope:
+txc10a.cc:56:6: error: no declaration matches ‘void Txc10a::forwardMessage(omnetpp::cMessage*, omnetpp::cGate*)’
+   56 | void Txc10a::forwardMessage(cMessage *msg, cGate* k_from)
+      |      ^~~~~~
+txc10a.cc:16:18: note: candidate is: ‘virtual void Txc10a::forwardMessage(omnetpp::cMessage*)’
+   16 |     virtual void forwardMessage(cMessage *msg);
+      |                  ^~~~~~~~~~~~~~
+txc10a.cc:13:7: note: ‘class Txc10a’ defined here
+   13 | class Txc10a : public cSimpleModule
+      |       ^~~~~~
+make: *** [Makefile:108: out/gcc-debug//txc10a.o] Error 1
+"make MODE=debug all" terminated with exit code 2. Build might be incomplete.
+18:00:47 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+txc10a.cc: In member function ‘virtual void Txc10a::handleMessage(omnetpp::cMessage*)’:
+txc10a.cc:52:23: error: no matching function for call to ‘Txc10a::forwardMessage(omnetpp::cMessage*&, int&)’
+   52 |         forwardMessage(msg, k);
+      |         ~~~~~~~~~~~~~~^~~~~~~~
+txc10a.cc:16:18: note: candidate: ‘virtual void Txc10a::forwardMessage(omnetpp::cMessage*)’
+   16 |     virtual void forwardMessage(cMessage *msg);
+      |                  ^~~~~~~~~~~~~~
+txc10a.cc:16:18: note:   candidate expects 1 argument, 2 provided
+txc10a.cc: At global scope:
+txc10a.cc:56:6: error: no declaration matches ‘void Txc10a::forwardMessage(omnetpp::cMessage*, int)’
+   56 | void Txc10a::forwardMessage(cMessage *msg, int k_from)
+      |      ^~~~~~
+txc10a.cc:16:18: note: candidate is: ‘virtual void Txc10a::forwardMessage(omnetpp::cMessage*)’
+   16 |     virtual void forwardMessage(cMessage *msg);
+      |                  ^~~~~~~~~~~~~~
+txc10a.cc:13:7: note: ‘class Txc10a’ defined here
+   13 | class Txc10a : public cSimpleModule
+      |       ^~~~~~
+make: *** [Makefile:108: out/gcc-debug//txc10a.o] Error 1
+"make MODE=debug all" terminated with exit code 2. Build might be incomplete.
+18:03:22 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+txc10a.cc: In member function ‘virtual void Txc10a::handleMessage(omnetpp::cMessage*)’:
+txc10a.cc:53:23: error: no matching function for call to ‘Txc10a::forwardMessage(omnetpp::cMessage*&, int&)’
+   53 |         forwardMessage(msg, k);
+      |         ~~~~~~~~~~~~~~^~~~~~~~
+txc10a.cc:16:18: note: candidate: ‘virtual void Txc10a::forwardMessage(omnetpp::cMessage*)’
+   16 |     virtual void forwardMessage(cMessage *msg);
+      |                  ^~~~~~~~~~~~~~
+txc10a.cc:16:18: note:   candidate expects 1 argument, 2 provided
+txc10a.cc: At global scope:
+txc10a.cc:57:6: error: no declaration matches ‘void Txc10a::forwardMessage(omnetpp::cMessage*, int)’
+   57 | void Txc10a::forwardMessage(cMessage *msg, int k_from)
+      |      ^~~~~~
+txc10a.cc:16:18: note: candidate is: ‘virtual void Txc10a::forwardMessage(omnetpp::cMessage*)’
+   16 |     virtual void forwardMessage(cMessage *msg);
+      |                  ^~~~~~~~~~~~~~
+txc10a.cc:13:7: note: ‘class Txc10a’ defined here
+   13 | class Txc10a : public cSimpleModule
+      |       ^~~~~~
+make: *** [Makefile:108: out/gcc-debug//txc10a.o] Error 1
+"make MODE=debug all" terminated with exit code 2. Build might be incomplete.
+18:04:09 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+txc10a.cc:16:48: error: expected identifier before numeric constant
+   16 |     virtual void forwardMessage(cMessage *msg, 0);
+      |                                                ^
+txc10a.cc:16:48: error: expected ‘,’ or ‘...’ before numeric constant
+make: *** [Makefile:108: out/gcc-debug//txc10a.o] Error 1
+"make MODE=debug all" terminated with exit code 2. Build might be incomplete.
+18:04:58 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+txc10a.cc:16:48: error: expected identifier before numeric constant
+   16 |     virtual void forwardMessage(cMessage *msg, 0);
+      |                                                ^
+txc10a.cc:16:48: error: expected ‘,’ or ‘...’ before numeric constant
+make: *** [Makefile:108: out/gcc-debug//txc10a.o] Error 1
+"make MODE=debug all" terminated with exit code 2. Build might be incomplete.
+18:07:06 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+txc10a.cc:16:52: error: expected ‘)’ before numeric constant
+   16 |     virtual void forwardMessage(cMessage *msg, int(0));
+      |                                                   ~^
+      |                                                    )
+txc10a.cc:16:52: error: expected ‘)’ before numeric constant
+   16 |     virtual void forwardMessage(cMessage *msg, int(0));
+      |                                ~                   ^
+      |                                                    )
+txc10a.cc:16:51: error: expected ‘;’ at end of member declaration
+   16 |     virtual void forwardMessage(cMessage *msg, int(0));
+      |                                                   ^
+      |                                                    ;
+txc10a.cc:16:52: error: expected unqualified-id before numeric constant
+   16 |     virtual void forwardMessage(cMessage *msg, int(0));
+      |                                                    ^
+txc10a.cc:57:6: error: no declaration matches ‘void Txc10a::forwardMessage(omnetpp::cMessage*, int)’
+   57 | void Txc10a::forwardMessage(cMessage *msg, int k_from)
+      |      ^~~~~~
+txc10a.cc:16:18: note: candidate is: ‘virtual void Txc10a::forwardMessage(...)’
+   16 |     virtual void forwardMessage(cMessage *msg, int(0));
+      |                  ^~~~~~~~~~~~~~
+txc10a.cc:13:7: note: ‘class Txc10a’ defined here
+   13 | class Txc10a : public cSimpleModule
+      |       ^~~~~~
+make: *** [Makefile:108: out/gcc-debug//txc10a.o] Error 1
+"make MODE=debug all" terminated with exit code 2. Build might be incomplete.
+18:08:31 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+18:42:52 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+18:49:42 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+19:27:00 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+19:28:19 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+19:29:29 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+22:11:15 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc10a.cc
+txc11.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+22:17:03 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc11.cc
+txc11.cc:19:52: error: ‘destination’ is not a type
+   19 |         virtual void forwardMessage(cMessage *msg, destination);
+      |                                                    ^~~~~~~~~~~
+make: *** [Makefile:108: out/gcc-debug//txc11.o] Error 1
+"make MODE=debug all" terminated with exit code 2. Build might be incomplete.
+22:17:51 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc11.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+22:19:21 **** Incremental Build of configuration debug for project TicToc_1 ****
+make MODE=debug all 
+txc11.cc
+Creating executable: out/gcc-debug//TicToc_1_dbg
+22:30:29 **** Incremental Build of configuration release for project TicToc_1 ****
+make MODE=release all 
+txc10.cc
+txc10a.cc
+txc11.cc
+Creating executable: out/gcc-release//TicToc_1
+22:31:28 **** Incremental Build of configuration release for project TicToc_1 ****
+make MODE=release all 
+txc11.cc
+Creating executable: out/gcc-release//TicToc_1
+22:34:28 **** Incremental Build of configuration release for project TicToc_1 ****
+make MODE=release all 
+txc11.cc
+Creating executable: out/gcc-release//TicToc_1
+22:36:44 **** Incremental Build of configuration release for project TicToc_1 ****
+make MODE=release all 
+txc11.cc
+Creating executable: out/gcc-release//TicToc_1
+22:38:12 **** Incremental Build of configuration release for project TicToc_1 ****
+make MODE=release all 
+txc10a.cc
+Creating executable: out/gcc-release//TicToc_1
+22:55:34 **** Incremental Build of configuration release for project TicToc_1 ****
+make MODE=release all 
+txc11.cc
+Creating executable: out/gcc-release//TicToc_1
+23:23:37 **** Incremental Build of configuration release for project TicToc_1 ****
+make MODE=release all 
+txc12.cc
+Creating executable: out/gcc-release//TicToc_1
+23:39:57 **** Incremental Build of configuration release for project TicToc_1 ****
+make MODE=release all 
+MSGC: tictoc13.msg
+txc13.cc
+txc13.cc:78:6: error: no declaration matches ‘void Txc13::forwardMessage(TicTocMsg13*)’
+   78 | void Txc13::forwardMessage(TicTocMsg13 *msg)
+      |      ^~~~~
+txc13.cc:19:22: note: candidate is: ‘virtual void Txc13::forwardMessage(omnetpp::cMessage*)’
+   19 |         virtual void forwardMessage(cMessage *msg);
+      |                      ^~~~~~~~~~~~~~
+txc13.cc:14:7: note: ‘class Txc13’ defined here
+   14 | class Txc13 : public cSimpleModule
+      |       ^~~~~
+make: *** [Makefile:115: out/gcc-release//txc13.o] Error 1
+"make MODE=release all" terminated with exit code 2. Build might be incomplete.
+23:40:46 **** Incremental Build of configuration release for project TicToc_1 ****
+make MODE=release all 
+txc13.cc
+tictoc13_m.cc
+Creating executable: out/gcc-release//TicToc_1

@@ -1,6 +1,7 @@
-22:56:45 **** Incremental Build of configuration release for project TicToc_0 ****
+14:26:07 **** Build of configuration release for project TicToc_0 ****
 make MODE=release all 
-make: Nothing to be done for 'all'.
+txc9.cc
+Creating executable: out/gcc-release//TicToc_0
 
-22:56:45 Build Finished. 0 errors, 0 warnings. (took 235ms)
+14:26:08 Build Finished. 0 errors, 0 warnings. (took 1s.488ms)
 
