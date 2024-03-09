@@ -353,3 +353,33 @@ make MODE=release all
 txc13.cc
 tictoc13_m.cc
 Creating executable: out/gcc-release//TicToc_1
+09:43:45 **** Incremental Build of configuration release for project TicToc_0 ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+10:05:33 **** Incremental Build of configuration release for project TicToc_0 ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+10:53:47 **** Build of configuration debug for project TicToc_2 ****
+make MODE=debug all 
+MSGC: tictoc14.msg
+txc14.cc
+tictoc14_m.cc
+Creating executable: out/gcc-debug//TicToc_2_dbg
+10:56:46 **** Incremental Build of configuration debug for project TicToc_2 ****
+make MODE=debug all 
+MSGC: tictoc15.msg
+txc15.cc
+tictoc15_m.cc
+Creating executable: out/gcc-debug//TicToc_2_dbg
+11:01:52 **** Incremental Build of configuration debug for project TicToc_2 ****
+make MODE=debug all 
+MSGC: tictoc16.msg
+txc16.cc
+tictoc16_m.cc
+Creating executable: out/gcc-debug//TicToc_2_dbg
+11:04:44 **** Incremental Build of configuration debug for project TicToc_2 ****
+make MODE=debug all 
+MSGC: tictoc17.msg
+txc17.cc
+tictoc17_m.cc
+Creating executable: out/gcc-debug//TicToc_2_dbg
